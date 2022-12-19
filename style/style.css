@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+	--Very-Dark-Gray: hsl(0, 0%, 17%);
+	--Dark-Gray: hsl(0, 0%, 59%);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+
+#loading_screen{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	background-color: black;
+	z-index: 10000;
+	transition: all .5s;
+
+}
+#loading_screen.hide{
+	left: -5000px;
+	transition: all .8s;
+}
+small{
+	margin: auto;
+	color: lime;
+	font-weight: 700;
+	font-size: 3rem;
+	position: relative;
+	text-align: center;
+
+}
+small:nth-child(1){
+	animation: down 1s infinite;
+	transition: all 2s;
+}
+small:nth-child(2){
+	animation: down 1.2s infinite;
+	transition: all 2s;
+}
+small:nth-child(3){
+	animation: down 1.4s infinite;
+	transition: all 2s;
+}
+small:nth-child(4){
+	animation: down 1.6s infinite;
+	transition: all 2s;
+}
+small:nth-child(5){
+	animation: down 1.8s infinite;
+	transition: all 2s;
+}
+small:nth-child(6){
+	animation: down 2s infinite;
+	transition: all 2s;
+}
+small:nth-child(7){
+	animation: down 2.2s infinite;
+	transition: all 2s;
+}
+small:nth-child(8){
+	animation: down 2.4s infinite;
+	transition: all 2s;
+}
+small:nth-child(9){
+	animation: down 2.6s infinite;
+	transition: all 2s;
+}
+@keyframes down{
+	from{margin-top: 0}
+	to{margin-top: 25%}
+}
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#header{
+	width: 100%;
+	min-height: 200px;
+	background-image: url("../images/pattern-bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	padding: 1.5rem 0 1rem 0;
+	position: relative;
+}
+
+#header .title{
+	font-size: 18px;
+	font-weight: 700;
+	color: white;
+}
+
+#header .part_2{
+	margin-top: 1rem;
+	position: relative;
+}
+#header .part_2 input{
+	outline: none;
+	padding: 0.7rem 1rem;
+	font-size: 15px;
+	width: 40%;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.btn{
+	outline: none;
+	border: none;
+	border-radius: 0 8px 8px 0;
+	padding: 0.8rem;
+	background-color: black;
+	position: absolute;
+	top: 1%;
+	right: 30%;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.btn:hover{
+	background-color: var(--Very-Dark-Gray);
+}
+.btn img{
+	height: 10px;
+	width: 10px;
+}
+
+#info_box{
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	width: 80%;
+	background-color: white;
+	padding: 1.5rem;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 9999;
+}
+
+#info_box div{
+	flex-basis: 20%;
+	position: relative;
+}
+
+#info_box div:not(:nth-child(4)):after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -30px;
+	background-color: var(--Dark-Gray);
+	width: 1px;
+	height: 80%;
+	border-radius: 10px;
+}
+
+
+#info_box div h3{
+	font-size: 10px;
+	font-weight: 700;
+	color: var(--Dark-Gray);
+	text-transform: uppercase;
+	text-align: left;
+}
+
+#info_box div p{
+	margin-top: 10px;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--Very-Dark-Gray);
+	word-wrap: break-word;
+	text-align: left;
+}
+
+#map_part{
+	width: 100%;
+	min-height: 500px;
+	z-index: 0;
+}
+
+.marker{
+	background-color: red;
+}
+
+
+#footer{
+	padding: 2rem;
+}
+#footer a{
+	text-decoration: none;
+	color: var(--Dark-Gray);
+	transition: 0.2s linear;
+}
+#footer a:hover{
+	color: var(--Very-Dark-Gray);
+}
+
+@media (max-width: 800px){
+	#header{
+		min-height: 300px;
+	}
+	#header .title{
+		font-size: 10px;
+	}
+	#header .part_2 input{
+		width: 88%;
+	}
+	.btn{
+		right: 5%;
+	}
+	#info_box{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+	}
+	#info_box div:not(:nth-child(1)){
+		margin-top: 20px;
+	}
+	#info_box div:after{
+		display: none;
+	}
+	#info_box div h3{
+		text-align: center;
+	}
+	#info_box div p{
+		text-align: center;
+	}
+	#map_part{
+		min-height: 400px;
+	}
+	#footer{
+		padding: 1rem;
+	}
+}

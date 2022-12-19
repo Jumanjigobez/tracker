@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Jumanji | IP Address Tracker</title>
+
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
+
+</head>
+<body>
+
+  <div id="loading_screen">
+      <small>L</small>
+      <small>O</small>
+      <small>A</small>
+      <small>D</small>
+      <small>I</small>
+      <small>N</small>
+      <small>G</small>
+      <small>.</small>
+      <small>.</small>
+  </div>
+
+  <main>
+    <header id="header">
+      <div class="title">
+        <h1>IP Address Tracker</h1>
+      </div>
+
+      <div class="part_2">
+        <input type="text" name="search" class="search" placeholder="Search for any IP address or domain">
+        <button class="btn" onclick="startSearch()"><img src="images/icon-arrow.svg" alt="click button"></button>
+      </div>
+
+      <div id="info_box">
+
+        <div>
+          <h3>IP Address</h3>
+          <p class="ip_address"></p>
+        </div>
+
+        <div>
+          <h3>Location</h3>
+          <p class="location"></p>
+        </div>
+
+        <div>
+          <h3>Timezone</h3>
+          <p class="timezone"></p>
+        </div>
+
+        <div>
+          <h3>ISP</h3>
+          <p class="isp"></p>
+        </div>
+    
+      </div>
+
+    </header>
+
+    <section id="map_part">
+      
+    </section>
+
+    <footer id="footer">
+      <p>Coded By <a href="https://www.jumanjigobez.github.io/personal_portfolio/" target="_blank">Jumanji</a></p>
+    </footer>
+  </main>
+
+ <script type="text/javascript" src="script/script.js"></script>
+
+</body>
+</html>
